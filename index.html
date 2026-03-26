@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -50,8 +49,6 @@
             transition: all 0.2s; text-transform: uppercase;
         }
 
-        #reset-btn:hover { background: rgba(255, 77, 77, 0.1); box-shadow: 0 0 10px rgba(255, 77, 77, 0.3); }
-
         .machine-grid { 
             display: grid; 
             grid-template-columns: repeat(4, 1fr); 
@@ -69,8 +66,7 @@
         .machine-card:hover { transform: translateY(-8px); border-color: #d4af37; box-shadow: 0 0 25px rgba(212, 175, 55, 0.3); }
         .machine-card h2 { font-family: 'Cinzel', serif; color: #f4e4bc; font-size: 20px; margin-bottom: 15px; letter-spacing: 1px; }
 
-        .realm-icon { width: 60px; height: 60px; margin-bottom: 20px; transition: transform 0.3s; }
-        .machine-card:hover .realm-icon { transform: scale(1.2) rotate(5deg); }
+        .realm-icon { width: 60px; height: 60px; margin-bottom: 20px; }
 
         .completion-badge {
             display: none; background: rgba(0, 0, 0, 0.85); border: 2px solid #d4af37;
@@ -86,7 +82,7 @@
             background: linear-gradient(180deg, #1e150d 0%, #0f0a05 100%);
             border: 4px solid #8c6d31; border-radius: 20px; padding: 35px;
             width: 1250px; 
-            box-shadow: 0 0 60px rgba(0, 0, 0, 0.9), inset 0 0 30px rgba(140, 109, 49, 0.2);
+            box-shadow: 0 0 60px rgba(0, 0, 0, 0.9);
             position: relative;
         }
 
@@ -98,13 +94,12 @@
             font-family: 'Cinzel', serif; font-size: 16px; text-transform: uppercase;
         }
         
-        #game-title { font-family: 'Cinzel', serif; color: #d4af37; font-size: 52px; letter-spacing: 4px; text-shadow: 0 0 15px rgba(212, 175, 55, 0.4); }
+        #game-title { font-family: 'Cinzel', serif; color: #d4af37; font-size: 52px; letter-spacing: 4px; }
 
         #reel-window {
             background: #050402; border: 3px solid #d4af37; border-radius: 12px;
             height: 450px; 
             position: relative; overflow: hidden; margin-bottom: 30px;
-            box-shadow: inset 0 0 50px rgba(0,0,0,1);
         }
 
         #reel-strip { position: absolute; top: 0; left: 0; width: 100%; display: flex; flex-direction: column; }
@@ -115,10 +110,9 @@
             padding: 20px 80px; box-sizing: border-box; text-align: center;
         }
 
-        .turkish-text { color: #ffffff; font-size: 48px; font-weight: bold; line-height: 1.3; margin: 0; text-shadow: 2px 2px 4px rgba(0,0,0,0.5); }
+        .turkish-text { color: #ffffff; font-size: 48px; font-weight: bold; line-height: 1.3; margin: 0; }
         .english-text { color: #d4af37; font-size: 44px; margin-top: 20px; font-weight: bold; display: none; line-height: 1.3; text-shadow: 0 0 10px rgba(212, 175, 55, 0.6); }
 
-        /* DASHBOARD METERS */
         #meters { display: flex; justify-content: center; gap: 40px; background: rgba(0, 0, 0, 0.7); border: 1px solid #4a3821; border-radius: 12px; padding: 20px; margin-bottom: 30px; }
         .meter { text-align: center; color: #f4e4bc; font-size: 36px; min-width: 250px; }
         .meter-title { font-family: 'Cinzel', serif; font-size: 16px; color: #8c6d31; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 5px; }
@@ -130,24 +124,17 @@
 
         #action-panel { display: flex; justify-content: center; gap: 50px; align-items: center; padding: 25px; background: rgba(0,0,0,0.5); border-radius: 15px; margin-bottom: 30px; min-height: 80px; border: 1px solid #4a3821; }
         .action-btn { background: transparent; border-radius: 8px; font-size: 28px; font-family: 'Oswald', sans-serif; padding: 15px 45px; cursor: pointer; font-weight: bold; display: none; text-transform: uppercase; transition: transform 0.1s; }
-        .action-btn:active { transform: scale(0.95); }
         #btn-tick { color: #39FF14; border: 2px solid #39FF14; }
         #btn-cross { color: #ff4d4d; border: 2px solid #ff4d4d; }
         #btn-hint { color: #00e5ff; border: 2px solid #00e5ff; }
 
         #controls { display: flex; justify-content: center; align-items: center; position: relative; min-height: 100px; }
-
-        #spin-btn {
-            background: rgba(212, 175, 55, 0.1); border: 3px solid #d4af37; border-radius: 50px; color: #d4af37;
-            font-family: 'Cinzel', serif; font-size: 46px; font-weight: 900; padding: 15px 150px;
-            cursor: pointer; box-shadow: 0 0 30px rgba(212, 175, 55, 0.3); text-transform: uppercase; letter-spacing: 6px; transition: all 0.2s;
-        }
+        #spin-btn { background: rgba(212, 175, 55, 0.1); border: 3px solid #d4af37; border-radius: 50px; color: #d4af37; font-family: 'Cinzel', serif; font-size: 46px; font-weight: 900; padding: 15px 150px; cursor: pointer; text-transform: uppercase; letter-spacing: 6px; }
         #spin-btn:disabled { display: none; }
-
         #finish-btn { display: none; background: rgba(57, 255, 20, 0.1); border: 2px solid #39FF14; border-radius: 50px; color: #39FF14; font-family: 'Cinzel', serif; font-size: 36px; font-weight: bold; padding: 15px 100px; text-transform: uppercase; cursor: pointer; }
 
         #custom-modal { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.92); z-index: 1000; justify-content: center; align-items: center; backdrop-filter: blur(10px); }
-        .modal-content { background: #1e150d; border: 3px solid #d4af37; border-radius: 16px; padding: 60px; text-align: center; max-width: 600px; box-shadow: 0 0 60px rgba(212, 175, 55, 0.4); }
+        .modal-content { background: #1e150d; border: 2px solid #d4af37; border-radius: 16px; padding: 60px; text-align: center; max-width: 600px; }
         .modal-content p { color: #f4e4bc; font-size: 32px; margin-bottom: 45px; line-height: 1.4; font-family: 'Cinzel', serif; }
         .modal-btn { background: transparent; color: #39FF14; border: 2px solid #39FF14; padding: 18px 60px; font-size: 28px; font-family: 'Cinzel', serif; border-radius: 10px; cursor: pointer; font-weight: bold; text-transform: uppercase; }
 
@@ -221,14 +208,14 @@
         </div>
     </div>
 
-    <div id="custom-modal"><div class="modal-content"><p>Aydınlanma Tamamlandı!<br><br>Şimdi hatalarından ders çıkarma vakti. Tekrar et ve bilgini mühürle.</p><button class="modal-btn" onclick="startRedemptionRound()">DEVAM ET</button></div></div>
+    <div id="custom-modal"><div class="modal-content"><p>Aydınlanma Tamamlandı!<br><br>Hatalarından ders çıkarma vakti. Tekrar et ve mühürle.</p><button class="modal-btn" onclick="startRedemptionRound()">DEVAM ET</button></div></div>
 
     <script>
         const allSentenceData = {
             "set1": [
                 { tr: "Ya koşabilirim ya da yürüyebilirim.", en: "I can either run or walk." },
                 { tr: "Yarışı bir şekilde kazandı.", en: "He somehow won the race." },
-                { tr: "Kapıyı bilerek kilitlemedim.", en: "I didn't lock the door on purpose (intentionally, deliberately)." },
+                { tr: "Kapıyı bilerek kilitlemedim.", en: "I didn't lock the door on purpose." },
                 { tr: "Arkasına bakmadan gitti.", en: "He left without looking back." },
                 { tr: "Artık gidip oynayalım.", en: "Now, let's go play." },
                 { tr: "Hiç timsah yedin mi?", en: "Did you ever eat crocodile?" },
@@ -238,23 +225,23 @@
                 { tr: "Hem kırmızıyı hem de maviyi severim.", en: "I like both red and blue." },
                 { tr: "Tesadüfen karşılaştık.", en: "We met coincidentally (by chance)." },
                 { tr: "Sana bir dereceye kadar katılabilirim.", en: "I can agree with you to some extent." },
-                { tr: "Yağmur yağısa bile gideceğim.", en: "I will go even if it rains." },
-                { tr: "Yağmur yağdı; sonuç olarak kaldık.", en: "It rained; consequently (as a result), we stayed." },
+                { tr: "Yağmur yağsa bile gideceğim.", en: "I will go even if it rains." },
+                { tr: "Yağmur yağdı; sonuç olarak kaldık.", en: "It rained; consequently, we stayed." },
                 { tr: "O genç değil, ben de değilim.", en: "He is not young, and neither am I." },
                 { tr: "Takım adına konuşuyorum.", en: "I speak on behalf of the team." }
             ],
             "set2": [
                 { tr: "Yağmur yağacakmış gibi görünüyor.", en: "It looks as if it will rain." },
-                { tr: "Onu son zamanlarda gördüm.", en: "I saw him recently (currently, lately)." },
+                { tr: "Onu son zamanlarda gördüm.", en: "I saw him recently (lately)." },
                 { tr: "Kar yağarsa diye mont al.", en: "Take a coat in case of snow." },
                 { tr: "Ona göre bu doğru.", en: "According to him, it is true." },
                 { tr: "Müsaitliğinizi göz önünde bulundurarak arıyorum.", en: "I am calling regarding your availability." },
-                { tr: "Sen bekle, ben bu esnada çalışacağım.", en: "You wait; in the meantime (meanwhile), I will work." },
+                { tr: "Sen bekle, ben bu esnada çalışacağım.", en: "In the meantime, I will work." },
                 { tr: "Hız açısından iyi.", en: "It is good in terms of speed." },
-                { tr: "Bu yemek diğer yemeğe kıyasla daha lezzetli.", en: "This food is more delicious compared to the other food." },
+                { tr: "Bu yemek diğerine kıyasla daha lezzetli.", en: "This is more delicious compared to the other." },
                 { tr: "Şehri temelli terk etti.", en: "He left the city for good." },
-                { tr: "Aslına bakarsan açım.", en: "As a matter of fact (in fact, actually), I am hungry." },
-                { tr: "Hava o kadar soğuktu ki arabayı çalıştıramadım.", en: "It was so cold that I couldn't start the car." },
+                { tr: "Aslına bakarsan açım.", en: "As a matter of fact, I am hungry." },
+                { tr: "Hava o kadar soğuktu ki çalıştıramadım.", en: "It was so cold that I couldn't start it." },
                 { tr: "Maalesef maçı kaybettik.", en: "Unfortunately, we lost the game." },
                 { tr: "Keşke cevabı bilseydim!", en: "If only I knew the answer!" },
                 { tr: "Oynamak yerine uyu.", en: "Sleep instead of playing." },
@@ -264,7 +251,7 @@
             "set3": [
                 { tr: "Bu hikaye gerçeklere dayanıyor.", en: "This story is based on true facts." },
                 { tr: "Tatilimiz maddi durumumuza bağlı.", en: "Our holiday depends on our financial situation." },
-                { tr: "Bana avukatım aracılığıyla ulaşın.", en: "Reach me via (through) my lawyer." },
+                { tr: "Bana avukatım aracılığıyla ulaşın.", en: "Reach me via my lawyer." },
                 { tr: "Lütfen beni haberdar et.", en: "Please keep me posted." },
                 { tr: "Sırasıyla birinci ve ikinciler.", en: "They are first and second, respectively." },
                 { tr: "Sadece bir dil sürçmesiydi.", en: "It was just a slip of the tongue." },
@@ -273,9 +260,9 @@
                 { tr: "İlkini seviyorum, ikincisini değil.", en: "I like the former, not the latter." },
                 { tr: "Artık burada olduğuna göre başlayalım.", en: "Now that you are here, let's start." },
                 { tr: "Ben zaten yedim.", en: "I already ate." },
-                { tr: "Ucuz, üstelik iyi.", en: "It is cheap; moreover (what's more, furthermore, in addition, besides), it is good." },
+                { tr: "Ucuz, üstelik iyi.", en: "It is cheap; moreover, it is good." },
                 { tr: "Mademki geç oldu, gitmeliyiz.", en: "Seeing that it is late, we must go." },
-                { tr: "Kim tahmin ederdi?", en: "Who would guess (know)?" },
+                { tr: "Kim tahmin ederdi?", en: "Who would guess?" },
                 { tr: "Senin sayende kazandık.", en: "We won thanks to you." },
                 { tr: "Bardağın kırılma ihtimali yüksek.", en: "The glass is likely to break." }
             ],
@@ -284,18 +271,18 @@
                 { tr: "Üzgün değilim, bilakis mutluyum.", en: "I am not sad; on the contrary, I am happy." },
                 { tr: "Meğerse o haklıymış.", en: "It turns out that he was right." },
                 { tr: "Dilimin ucunda.", en: "It is on the tip of my tongue." },
-                { tr: "Berabere kaldık, yani darılmaca yok.", en: "We tied the game, so no hard feelings." },
+                { tr: "Berabere kaldık, darılmaca yok.", en: "We tied the game, so no hard feelings." },
                 { tr: "Bırak koşmayı, yürüyemiyorum bile.", en: "I can't walk, let alone run." },
                 { tr: "Bildiğim kadarıyla evet.", en: "As far as I know, yes." },
                 { tr: "Su senin için iyidir.", en: "Water is good for you." },
-                { tr: "Pazartesi o kadar güzel bir gündü ki unutamıyorum.", en: "Monday was such a beautiful day that I cannot forget it." },
+                { tr: "Unutamadığım harika bir gündü.", en: "It was such a beautiful day I cannot forget it." },
                 { tr: "Öyle ya da böyle yap.", en: "Do it this way or that way." },
-                { tr: "Yemekten yarım saat öncesine kadar su içmemelisin.", en: "You shouldn't drink water until half an hour prior to eating." },
+                { tr: "Öncesine kadar su içmemelisin.", en: "You shouldn't drink water prior to eating." },
                 { tr: "İlk bakışta iyi görünüyordu.", en: "At first glance, it looked fine." },
                 { tr: "Zamanla öğreneceksin.", en: "You will learn in the course of time." },
                 { tr: "Görüldüğü üzere kızgın.", en: "He is angry, as it seems." },
-                { tr: "İflasın eşiğinde.", en: "He is on the verge of (brink of) bankruptcy." },
-                { tr: "Kısacası, biz kazandık.", en: "In a nutshell (briefly), we won." }
+                { tr: "İflasın eşiğinde.", en: "He is on the verge of bankruptcy." },
+                { tr: "Kısacası, biz kazandık.", en: "In a nutshell, we won." }
             ],
             "set5": [
                 { tr: "Bunun benimle hiçbir ilgisi yok.", en: "It has nothing to do with me." },
@@ -306,30 +293,30 @@
                 { tr: "Canı pahasına yalan söylemedi.", en: "He didn't lie in expense of his life." },
                 { tr: "O henüz burada değil.", en: "He is not here yet." },
                 { tr: "Artık aç değilim.", en: "I am not hungry anymore." },
-                { tr: "Ne yaparsan yap, güvende ol.", en: "Whatever (no matter what) you do, be safe." },
+                { tr: "Ne yaparsan yap, güvende ol.", en: "Whatever you do, be safe." },
                 { tr: "Tıpkı bir kuşa benziyor.", en: "It looks just like a bird." },
                 { tr: "Bu arada, merhaba.", en: "By the way, hello." },
                 { tr: "Sadece hızlı değil, aynı zamanda güçlü.", en: "He is not only fast but also strong." },
-                { tr: "Ne kadar çok okursan o kadar çok öğrenirsin.", en: "The more you read, the more you learn." },
-                { tr: "Bir at ne kadar hızlıysa o kadar pahalıdır.", en: "The faster a horse is, the more expensive it is." },
-                { tr: "Ne bunu istiyorum ne de onu.", en: "I want neither this nor that." },
+                { tr: "Ne kadar okursan o kadar öğrenirsin.", en: "The more you read, the more you learn." },
+                { tr: "Hızlı at daha pahalıdır.", en: "The faster a horse is, the more expensive." },
+                { tr: "Ne bunu ne de onu istiyorum.", en: "I want neither this nor that." },
                 { tr: "Kuralları aklında tut.", en: "Keep in mind the rules." }
             ],
             "set6": [
                 { tr: "O zamanlar fakirdik.", en: "We were poor then." },
-                { tr: "Bileti ben alırım yemeği sen ısmarlarsın ya da tam tersi.", en: "I buy the ticket and you pay for the food, or vice versa (the other way around)." },
-                { tr: "Derhal koşmayı bırak.", en: "Stop running at once (immediately)." },
+                { tr: "Bileti ben alırım ya da tam tersi.", en: "I buy the ticket, or vice versa." },
+                { tr: "Derhal koşmayı bırak.", en: "Stop running at once." },
                 { tr: "O tenis oynar, ben de oynarım.", en: "He plays tennis, and so do I." },
                 { tr: "En kısa sürede gel.", en: "Come as soon as possible." },
-                { tr: "Kayağa gitme durumunda montunu al.", en: "Take your coat in case you go skiing." },
-                { tr: "Düştüm; bu yüzden canım acıyor.", en: "I fell; therefore (that's why), I am hurt." },
+                { tr: "Kayağa gitme durumunda mont al.", en: "Take your coat in case you go skiing." },
+                { tr: "Düştüm; bu yüzden canım acıyor.", en: "I fell; therefore, I am hurt." },
                 { tr: "Kaderin bir cilvesiyle tanıştık.", en: "By a twist of fate, we met." },
                 { tr: "Uzun vadede sağlıklıdır.", en: "It is healthy in the long term." },
                 { tr: "Katiyen kumar oynamam.", en: "I don't gamble at all." },
                 { tr: "Söylentiye göre kaçmışlar.", en: "Rumour has it they escaped." },
                 { tr: "Yorgun olduğu çok bariz.", en: "It is obvious that he is tired." },
-                { tr: "Yağmuru göz önünde bulundurmaksızın oynuyoruz.", en: "We play regardless of the rain." },
-                { tr: "İşin en başında ona güvenmemeliydik.", en: "We shouldn't have trusted him in the first place." },
+                { tr: "Yağmura rağmen oynuyoruz.", en: "We play regardless of the rain." },
+                { tr: "İşin başında güvenmemeliydik.", en: "We shouldn't have trusted in the first place." },
                 { tr: "Bitirdiğinde bana haber ver.", en: "Let me know when you finish." },
                 { tr: "Daha önce dediğim gibi, hayır.", en: "As I said before, no." }
             ],
@@ -342,32 +329,32 @@
                 { tr: "Oturmamın bir sakıncası var mı?", en: "Do you mind if I sit?" },
                 { tr: "Bunu son çare olarak kullan.", en: "Use it as a last resort." },
                 { tr: "Beni damdan düşercesine aradı.", en: "He called me out of the blue." },
-                { tr: "O kötü bir adam; başka bir deyişle ona güvenemeyiz.", en: "He is a bad man; in other words, we can't trust him." },
+                { tr: "Başka bir deyişle ona güvenemeyiz.", en: "In other words, we can't trust him." },
                 { tr: "O bardağı taşıran son damlaydı.", en: "That was the tipping point." },
                 { tr: "Biletleri peşinen ödeyin.", en: "Pay for the tickets in advance." },
                 { tr: "En azından bir kez dene.", en: "Try it at least once." },
-                { tr: "Yurtdışında yaşayacağız ama madalyonun diğer yüzü de var: orası soğuk.", en: "We will live abroad, but the coin has a flipside: it is cold there." },
+                { tr: "Madalyonun diğer yüzü: orası soğuk.", en: "Flipside is: it is cold there." },
                 { tr: "Bilseydim yardım ederdim.", en: "Had I known, I would have helped." },
-                { tr: "Türkiye'de kaldığın müddetçe enflasyonu öğrenmek zorundasın.", en: "You have to learn about inflation as long as you stay in Turkey." },
-                { tr: "Beni yanlış anlama ama ben bunu beğendim.", en: "Don't get me wrong, but I like it." }
+                { tr: "Kaldığın müddetçe enflasyonu öğren.", en: "Learn it as long as you stay." },
+                { tr: "Beni yanlış anlama ama beğendim.", en: "Don't get me wrong, but I like it." }
             ],
             "set8": [
                 { tr: "Çıkmak üzereyim.", en: "I am about to leave." },
                 { tr: "Allah'tan güvendeyiz.", en: "Fortunately, we are safe." },
-                { tr: "Arabayı yıkamak 30 dakikamı alıyor.", en: "It takes me 30 minutes to wash the car." },
+                { tr: "Yıkamak 30 dakikamı alıyor.", en: "It takes me 30 minutes to wash." },
                 { tr: "Öte yandan, ucuz.", en: "On the other hand, it's cheap." },
                 { tr: "Aynı şey ortağım için de geçerli.", en: "The same goes for my partner." },
                 { tr: "Senin aksine ben hızlı koşarım.", en: "Unlike you, I run fast." },
                 { tr: "Davet edilmedikçe girme.", en: "Don't enter unless you are invited." },
                 { tr: "Düştü ama yine de gülümsedi.", en: "He fell, yet he smiled." },
-                { tr: "Türk ekonomisi bir kısır döngü.", en: "The Turkish economy is a vicious circle." },
+                { tr: "Ekonomi bir kısır döngü.", en: "The economy is a vicious circle." },
                 { tr: "Ortalama olarak hava sıcak.", en: "On average, it is warm." },
-                { tr: "Bu gerçeklerin ışığında, o kazandı.", en: "Under the light of these facts, he won." },
+                { tr: "Bu gerçeklerin ışığında kazandı.", en: "Under the light of these facts, he won." },
                 { tr: "Eninde sonunda duracak.", en: "He will eventually stop." },
                 { tr: "Çay veya kahve, aynı hesap.", en: "Tea or coffee, same difference." },
-                { tr: "Kırk yılda bir konuşuruz.", en: "We talk once in a while (every now and then)." },
+                { tr: "Kırk yılda bir konuşuruz.", en: "We talk every now and then." },
                 { tr: "Sözüm ona patron o.", en: "So to say, he is the boss." },
-                { tr: "Benzer şekilde, ben de katılıyorum.", en: "Similarly (likewise), I agree." }
+                { tr: "Benzer şekilde, katılıyorum.", en: "Similarly (likewise), I agree." }
             ]
         };
 
@@ -391,7 +378,7 @@
             const progress = JSON.parse(localStorage.getItem(STORAGE_KEY)) || {};
             for (let i = 1; i <= 8; i++) {
                 const setId = 'set' + i, badge = document.getElementById('badge-' + setId);
-                if (badge && progress[setId] !== undefined) {
+                if (badge && progress[setId]) {
                     badge.classList.add('visible');
                     document.getElementById('score-' + setId).innerText = progress[setId].score;
                     document.getElementById('percent-' + setId).innerText = progress[setId].percent;
@@ -399,7 +386,7 @@
             }
         }
 
-        function resetAllProgress() { if(confirm("Tüm ilerlemeyi sıfırlamak istediğine emin misin?")) { localStorage.removeItem(STORAGE_KEY); updateLobbyUI(); } }
+        function resetAllProgress() { if(confirm("Tüm efsanevi ilerlemeyi sıfırlamak istediğine emin misin?")) { localStorage.removeItem(STORAGE_KEY); updateLobbyUI(); } }
 
         function openGame(setId, realmName) {
             currentSetId = setId; unseenPool = JSON.parse(JSON.stringify(allSentenceData[setId]));
@@ -456,8 +443,7 @@
 
         function startActionPhase() {
             btnTick.style.display = 'block'; btnCross.style.display = 'block'; btnHint.style.display = 'block'; 
-            timerMeter.style.visibility = 'visible'; 
-            btnTick.disabled = true; btnCross.disabled = true; btnHint.disabled = false; 
+            timerMeter.style.visibility = 'visible'; btnTick.disabled = true; btnCross.disabled = true; btnHint.disabled = false; 
             countdownValue = 10; timerDisplay.innerText = countdownValue;
             countdownTimer = setInterval(() => { countdownValue--; timerDisplay.innerText = countdownValue; if (countdownValue <= 0) clearInterval(countdownTimer); }, 1000);
         }
