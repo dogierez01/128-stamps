@@ -20,31 +20,31 @@
             overflow-y: auto;
         }
 
-        /* --- LOBBY STYLES --- */
+        /* --- LOBBY STYLES (COMPACT) --- */
         #lobby-view {
             text-align: center;
             width: 100%;
-            max-width: 1300px;
-            padding: 40px 20px;
+            max-width: 1200px;
+            padding: 20px;
         }
 
         .arcade-title {
             font-family: 'Cinzel', serif;
             color: #d4af37;
-            font-size: 56px;
+            font-size: 48px;
             font-weight: 900;
             margin-top: 0;
-            margin-bottom: 15px;
-            text-shadow: 0 0 20px rgba(212, 175, 55, 0.5);
-            letter-spacing: 4px;
+            margin-bottom: 10px;
+            text-shadow: 0 0 15px rgba(212, 175, 55, 0.5);
+            letter-spacing: 3px;
             text-transform: uppercase;
         }
 
-        .lobby-controls { margin-bottom: 40px; }
+        .lobby-controls { margin-bottom: 25px; }
 
         #reset-btn {
             background: transparent; color: #ff4d4d; border: 2px solid #ff4d4d;
-            padding: 10px 25px; font-family: 'Cinzel', serif; font-size: 18px;
+            padding: 8px 20px; font-family: 'Cinzel', serif; font-size: 16px;
             font-weight: bold; border-radius: 4px; cursor: pointer;
             transition: all 0.2s; text-transform: uppercase;
         }
@@ -52,28 +52,28 @@
         .machine-grid { 
             display: grid; 
             grid-template-columns: repeat(4, 1fr); 
-            gap: 25px; 
+            gap: 20px; 
         }
 
         .machine-card {
             background: linear-gradient(180deg, #261c12 0%, #120d08 100%);
-            border: 2px solid #8c6d31; border-radius: 12px; padding: 25px 15px;
+            border: 2px solid #8c6d31; border-radius: 10px; padding: 15px 10px;
             cursor: pointer; transition: all 0.3s; display: flex;
-            flex-direction: column; align-items: center; min-height: 240px;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.8);
+            flex-direction: column; align-items: center; min-height: 180px; /* SHRUNK HEIGHT */
+            box-shadow: 0 8px 20px rgba(0,0,0,0.8);
         }
 
-        .machine-card:hover { transform: translateY(-8px); border-color: #d4af37; box-shadow: 0 0 25px rgba(212, 175, 55, 0.3); }
-        .machine-card h2 { font-family: 'Cinzel', serif; color: #f4e4bc; font-size: 20px; margin-bottom: 15px; letter-spacing: 1px; }
+        .machine-card:hover { transform: translateY(-5px); border-color: #d4af37; box-shadow: 0 0 20px rgba(212, 175, 55, 0.3); }
+        .machine-card h2 { font-family: 'Cinzel', serif; color: #f4e4bc; font-size: 18px; margin-bottom: 12px; letter-spacing: 1px; }
 
-        .realm-icon { width: 60px; height: 60px; margin-bottom: 20px; }
+        .realm-icon { width: 50px; height: 50px; margin-bottom: 15px; }
 
         .completion-badge {
-            display: none; background: rgba(0, 0, 0, 0.85); border: 2px solid #d4af37;
-            border-radius: 8px; padding: 10px; width: 90%; text-align: center; margin-top: auto;
+            display: none; background: rgba(0, 0, 0, 0.85); border: 1px solid #d4af37;
+            border-radius: 6px; padding: 8px; width: 90%; text-align: center; margin-top: auto;
         }
         .completion-badge.visible { display: block; animation: popIn 0.5s; }
-        .final-score { color: #f4e4bc; font-size: 18px; font-weight: bold; display: block; }
+        .final-score { color: #f4e4bc; font-size: 16px; font-weight: bold; display: block; }
         .final-percent { color: #FFFF00; font-size: 14px; display: block; font-weight: bold; }
 
         /* --- GAME STYLES --- */
@@ -145,47 +145,47 @@
 
     <div id="lobby-view">
         <h1 class="arcade-title">MYTHOLOGY ACADEMY</h1>
-        <div class="lobby-controls"><button id="reset-btn" onclick="resetAllProgress()">İlerlemeyi Sıfırla</button></div>
+        <div class="lobby-controls"><button id="reset-btn" onclick="resetAllProgress()">Sıfırla</button></div>
         <div class="machine-grid">
             <div class="machine-card" onclick="openGame('set1', 'MOUNT OLYMPUS')">
                 <h2>MOUNT OLYMPUS</h2>
                 <svg class="realm-icon" viewBox="0 0 24 24" fill="none" stroke="#d4af37" stroke-width="2"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
-                <div id="badge-set1" class="completion-badge"><span class="final-score">Skor: <span id="score-set1">0</span></span><span class="final-percent">Başarı: <span id="percent-set1">0</span>%</span></div>
+                <div id="badge-set1" class="completion-badge"><span class="final-score">Puan: <span id="score-set1">0</span></span><span class="final-percent">Başarı: <span id="percent-set1">0</span>%</span></div>
             </div>
             <div class="machine-card" onclick="openGame('set2', 'VALHALLA')">
                 <h2>VALHALLA</h2>
                 <svg class="realm-icon" viewBox="0 0 24 24" fill="none" stroke="#00e5ff" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-                <div id="badge-set2" class="completion-badge"><span class="final-score">Skor: <span id="score-set2">0</span></span><span class="final-percent">Başarı: <span id="percent-set2">0</span>%</span></div>
+                <div id="badge-set2" class="completion-badge"><span class="final-score">Puan: <span id="score-set2">0</span></span><span class="final-percent">Başarı: <span id="percent-set2">0</span>%</span></div>
             </div>
             <div class="machine-card" onclick="openGame('set3', 'ATLANTIS')">
                 <h2>ATLANTIS</h2>
                 <svg class="realm-icon" viewBox="0 0 24 24" fill="none" stroke="#00ffa2" stroke-width="2"><path d="M12 2v20M7 7l5-5 5 5M4 12h16"/></svg>
-                <div id="badge-set3" class="completion-badge"><span class="final-score">Skor: <span id="score-set3">0</span></span><span class="final-percent">Başarı: <span id="percent-set3">0</span>%</span></div>
+                <div id="badge-set3" class="completion-badge"><span class="final-score">Puan: <span id="score-set3">0</span></span><span class="final-percent">Başarı: <span id="percent-set3">0</span>%</span></div>
             </div>
             <div class="machine-card" onclick="openGame('set4', 'GIZA PYRAMIDS')">
                 <h2>GIZA PYRAMIDS</h2>
                 <svg class="realm-icon" viewBox="0 0 24 24" fill="none" stroke="#ffa600" stroke-width="2"><path d="M12 2L2 20h20L12 2zM12 2v18"/></svg>
-                <div id="badge-set4" class="completion-badge"><span class="final-score">Skor: <span id="score-set4">0</span></span><span class="final-percent">Başarı: <span id="percent-set4">0</span>%</span></div>
+                <div id="badge-set4" class="completion-badge"><span class="final-score">Puan: <span id="score-set4">0</span></span><span class="final-percent">Başarı: <span id="percent-set4">0</span>%</span></div>
             </div>
             <div class="machine-card" onclick="openGame('set5', 'CAMELOT')">
                 <h2>CAMELOT</h2>
                 <svg class="realm-icon" viewBox="0 0 24 24" fill="none" stroke="#ff4d4d" stroke-width="2"><path d="M12 2l3 6 6 1-4 4 1 6-6-3-6 3 1-6-4-4 6-1 3-6z"/></svg>
-                <div id="badge-set5" class="completion-badge"><span class="final-score">Skor: <span id="score-set5">0</span></span><span class="final-percent">Başarı: <span id="percent-set5">0</span>%</span></div>
+                <div id="badge-set5" class="completion-badge"><span class="final-score">Puan: <span id="score-set5">0</span></span><span class="final-percent">Başarı: <span id="percent-set5">0</span>%</span></div>
             </div>
             <div class="machine-card" onclick="openGame('set6', 'EL DORADO')">
                 <h2>EL DORADO</h2>
                 <svg class="realm-icon" viewBox="0 0 24 24" fill="none" stroke="#39FF14" stroke-width="2"><circle cx="12" cy="12" r="8"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2"/></svg>
-                <div id="badge-set6" class="completion-badge"><span class="final-score">Skor: <span id="score-set6">0</span></span><span class="final-percent">Başarı: <span id="percent-set6">0</span>%</span></div>
+                <div id="badge-set6" class="completion-badge"><span class="final-score">Puan: <span id="score-set6">0</span></span><span class="final-percent">Başarı: <span id="percent-set6">0</span>%</span></div>
             </div>
             <div class="machine-card" onclick="openGame('set7', 'SHANGRI-LA')">
                 <h2>SHANGRI-LA</h2>
                 <svg class="realm-icon" viewBox="0 0 24 24" fill="none" stroke="#b366ff" stroke-width="2"><path d="M12 21a9 9 0 110-18 9 9 0 010 18z"/><path d="M12 7v10M7 12h10"/></svg>
-                <div id="badge-set7" class="completion-badge"><span class="final-score">Skor: <span id="score-set7">0</span></span><span class="final-percent">Başarı: <span id="percent-set7">0</span>%</span></div>
+                <div id="badge-set7" class="completion-badge"><span class="final-score">Puan: <span id="score-set7">0</span></span><span class="final-percent">Başarı: <span id="percent-set7">0</span>%</span></div>
             </div>
             <div class="machine-card" onclick="openGame('set8', 'UNDERWORLD')">
                 <h2>UNDERWORLD</h2>
                 <svg class="realm-icon" viewBox="0 0 24 24" fill="none" stroke="#777" stroke-width="2"><path d="M12 2a5 5 0 00-5 5v3a5 5 0 0010 0V7a5 5 0 00-5-5zM7 14s-1 2-1 4 1 4 6 4 6-2 6-4-1-4-1-4H7z"/></svg>
-                <div id="badge-set8" class="completion-badge"><span class="final-score">Skor: <span id="score-set8">0</span></span><span class="final-percent">Başarı: <span id="percent-set8">0</span>%</span></div>
+                <div id="badge-set8" class="completion-badge"><span class="final-score">Puan: <span id="score-set8">0</span></span><span class="final-percent">Başarı: <span id="percent-set8">0</span>%</span></div>
             </div>
         </div>
     </div>
@@ -223,7 +223,7 @@
                 { tr: "Bu kutu taş kadar ağır.", en: "This box is as heavy as stone." },
                 { tr: "Karşılık olarak gülümsedi.", en: "He smiled in return." },
                 { tr: "Hem kırmızıyı hem de maviyi severim.", en: "I like both red and blue." },
-                { tr: "Tesadüfen karşılaştık.", en: "We met coincidentally (by chance)." },
+                { tr: "Tesadüfen karşılaştık.", en: "We met coincidentally." },
                 { tr: "Sana bir dereceye kadar katılabilirim.", en: "I can agree with you to some extent." },
                 { tr: "Yağmur yağsa bile gideceğim.", en: "I will go even if it rains." },
                 { tr: "Yağmur yağdı; sonuç olarak kaldık.", en: "It rained; consequently, we stayed." },
@@ -232,13 +232,13 @@
             ],
             "set2": [
                 { tr: "Yağmur yağacakmış gibi görünüyor.", en: "It looks as if it will rain." },
-                { tr: "Onu son zamanlarda gördüm.", en: "I saw him recently (lately)." },
+                { tr: "Onu son zamanlarda gördüm.", en: "I saw him recently." },
                 { tr: "Kar yağarsa diye mont al.", en: "Take a coat in case of snow." },
                 { tr: "Ona göre bu doğru.", en: "According to him, it is true." },
                 { tr: "Müsaitliğinizi göz önünde bulundurarak arıyorum.", en: "I am calling regarding your availability." },
                 { tr: "Sen bekle, ben bu esnada çalışacağım.", en: "In the meantime, I will work." },
                 { tr: "Hız açısından iyi.", en: "It is good in terms of speed." },
-                { tr: "Bu yemek diğerine kıyasla daha lezzetli.", en: "This is more delicious compared to the other." },
+                { tr: "Bu yemek diğerine kıyasla daha lezzetli.", en: "This food is more delicious compared to the other." },
                 { tr: "Şehri temelli terk etti.", en: "He left the city for good." },
                 { tr: "Aslına bakarsan açım.", en: "As a matter of fact, I am hungry." },
                 { tr: "Hava o kadar soğuktu ki çalıştıramadım.", en: "It was so cold that I couldn't start it." },
@@ -271,13 +271,13 @@
                 { tr: "Üzgün değilim, bilakis mutluyum.", en: "I am not sad; on the contrary, I am happy." },
                 { tr: "Meğerse o haklıymış.", en: "It turns out that he was right." },
                 { tr: "Dilimin ucunda.", en: "It is on the tip of my tongue." },
-                { tr: "Berabere kaldık, darılmaca yok.", en: "We tied the game, so no hard feelings." },
+                { tr: "Berabere kaldık, yani darılmaca yok.", en: "We tied the game, so no hard feelings." },
                 { tr: "Bırak koşmayı, yürüyemiyorum bile.", en: "I can't walk, let alone run." },
                 { tr: "Bildiğim kadarıyla evet.", en: "As far as I know, yes." },
                 { tr: "Su senin için iyidir.", en: "Water is good for you." },
                 { tr: "Unutamadığım harika bir gündü.", en: "It was such a beautiful day I cannot forget it." },
                 { tr: "Öyle ya da böyle yap.", en: "Do it this way or that way." },
-                { tr: "Öncesine kadar su içmemelisin.", en: "You shouldn't drink water prior to eating." },
+                { tr: "Yemekten yarım saat öncesine kadar içme.", en: "You shouldn't drink water prior to eating." },
                 { tr: "İlk bakışta iyi görünüyordu.", en: "At first glance, it looked fine." },
                 { tr: "Zamanla öğreneceksin.", en: "You will learn in the course of time." },
                 { tr: "Görüldüğü üzere kızgın.", en: "He is angry, as it seems." },
@@ -297,26 +297,26 @@
                 { tr: "Tıpkı bir kuşa benziyor.", en: "It looks just like a bird." },
                 { tr: "Bu arada, merhaba.", en: "By the way, hello." },
                 { tr: "Sadece hızlı değil, aynı zamanda güçlü.", en: "He is not only fast but also strong." },
-                { tr: "Ne kadar okursan o kadar öğrenirsin.", en: "The more you read, the more you learn." },
-                { tr: "Hızlı at daha pahalıdır.", en: "The faster a horse is, the more expensive." },
-                { tr: "Ne bunu ne de onu istiyorum.", en: "I want neither this nor that." },
+                { tr: "Ne kadar çok okursan o kadar çok öğrenirsin.", en: "The more you read, the more you learn." },
+                { tr: "At ne kadar hızlıysa o kadar pahalıdır.", en: "The faster a horse is, the more expensive." },
+                { tr: "Ne bunu istiyorum ne de onu.", en: "I want neither this nor that." },
                 { tr: "Kuralları aklında tut.", en: "Keep in mind the rules." }
             ],
             "set6": [
                 { tr: "O zamanlar fakirdik.", en: "We were poor then." },
                 { tr: "Bileti ben alırım ya da tam tersi.", en: "I buy the ticket, or vice versa." },
-                { tr: "Derhal koşmayı bırak.", en: "Stop running at once." },
+                { tr: "Derhal koşmayı bırak.", en: "Stop running immediately." },
                 { tr: "O tenis oynar, ben de oynarım.", en: "He plays tennis, and so do I." },
                 { tr: "En kısa sürede gel.", en: "Come as soon as possible." },
                 { tr: "Kayağa gitme durumunda mont al.", en: "Take your coat in case you go skiing." },
-                { tr: "Düştüm; bu yüzden canım acıyor.", en: "I fell; therefore, I am hurt." },
+                { tr: "Düştüm; bu yüzden canım acıyor.", en: "I fell; that's why I am hurt." },
                 { tr: "Kaderin bir cilvesiyle tanıştık.", en: "By a twist of fate, we met." },
                 { tr: "Uzun vadede sağlıklıdır.", en: "It is healthy in the long term." },
                 { tr: "Katiyen kumar oynamam.", en: "I don't gamble at all." },
                 { tr: "Söylentiye göre kaçmışlar.", en: "Rumour has it they escaped." },
                 { tr: "Yorgun olduğu çok bariz.", en: "It is obvious that he is tired." },
                 { tr: "Yağmura rağmen oynuyoruz.", en: "We play regardless of the rain." },
-                { tr: "İşin başında güvenmemeliydik.", en: "We shouldn't have trusted in the first place." },
+                { tr: "İşin başında ona güvenmemeliydik.", en: "We shouldn't have trusted in the first place." },
                 { tr: "Bitirdiğinde bana haber ver.", en: "Let me know when you finish." },
                 { tr: "Daha önce dediğim gibi, hayır.", en: "As I said before, no." }
             ],
@@ -333,7 +333,7 @@
                 { tr: "O bardağı taşıran son damlaydı.", en: "That was the tipping point." },
                 { tr: "Biletleri peşinen ödeyin.", en: "Pay for the tickets in advance." },
                 { tr: "En azından bir kez dene.", en: "Try it at least once." },
-                { tr: "Madalyonun diğer yüzü: orası soğuk.", en: "Flipside is: it is cold there." },
+                { tr: "Madalyonun diğer yüzü: orası soğuk.", en: "The flipside is: it is cold there." },
                 { tr: "Bilseydim yardım ederdim.", en: "Had I known, I would have helped." },
                 { tr: "Kaldığın müddetçe enflasyonu öğren.", en: "Learn it as long as you stay." },
                 { tr: "Beni yanlış anlama ama beğendim.", en: "Don't get me wrong, but I like it." }
